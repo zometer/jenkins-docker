@@ -8,5 +8,5 @@ services:
 script:
   - export JENKINS_IMAGE_VERSION=`grep FROM Dockerfile | sed -e s/.*:// -e 's/[[:space:]]//g'`
   - env | grep -i jenkins
-  - docker image build -t "zometer/jenkins-docker:$JENKINS_IMAGE_VERSION"
+  - docker image build -t zometer/jenkins-docker:$JENKINS_IMAGE_VERSION .
 
