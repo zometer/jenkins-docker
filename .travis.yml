@@ -1,0 +1,10 @@
+sudo: required
+
+language: java
+
+services:
+  - docker
+
+script:
+  - export JENKINS_IMAGE_VERSION=`grep FROM Dockerfile | sed -e s/.*://`
+  - docker image build -t zometer/jenkins-docker:$JENKINS_IMAGE_VERSION
