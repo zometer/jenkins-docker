@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.107-slim
+FROM jenkins/jenkins:2.117-slim
 
 # Install docker
 USER root
